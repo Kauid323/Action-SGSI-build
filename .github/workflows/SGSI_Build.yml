@@ -55,7 +55,8 @@ jobs:
          sudo apt-get install -y python2
          # 创建 python 软链接（因为 Ubuntu 22.04 默认只安装 python2，不创建 python 命令）
          sudo ln -sf /usr/bin/python2 /usr/bin/python
-
+         python -m pip install --upgrade pip
+         python -m pip install protobuf==3.17.3
 
       - name: Configuration Environment‌‌...
         run: |
