@@ -53,6 +53,10 @@ jobs:
          sudo add-apt-repository -y ppa:deadsnakes/ppa
          sudo apt-get update
          sudo apt-get install -y python2
+         curl https://bootstrap.pypa.io/pip/2.7/get-pip.py --output get-pip.py
+         sudo python2 get-pip.py
+         sudo ln -sf /usr/bin/python2 /usr/bin/python
+         python -m pip --version
          # 创建 python 软链接（因为 Ubuntu 22.04 默认只安装 python2，不创建 python 命令）
          sudo ln -sf /usr/bin/python2 /usr/bin/python
          python -m pip install --upgrade pip
